@@ -1,9 +1,30 @@
 package com.example.appdoctruyen.object;
 
-public class TruyenTranh {
-    public String tenTruyen, tenChap, LinkAnh;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.io.Serializable;
+
+public class TruyenTranh implements Serializable {
+    public String id,tenTruyen, tenChap, LinkAnh;
+
+    /*
+    {
+    " tenTruyen":"",
+    " tenChap":"",
+    " linhAnh":"",
+
+    }
+     */
 
     public TruyenTranh(){
+
+    }
+    public TruyenTranh(JSONObject o) throws JSONException {
+        id = o.getString( "id" );
+        tenTruyen = o.getString( "tenTruyen" );
+        tenChap = o.getString( "tenChap" );
+        LinkAnh = o.getString( "linhAnh" );
 
     }
 
@@ -35,5 +56,13 @@ public class TruyenTranh {
 
     public void setLinkAnh(String linkAnh) {
         LinkAnh = linkAnh;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 }

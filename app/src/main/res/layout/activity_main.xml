@@ -10,9 +10,17 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:background="#363f44"
-        android:gravity="center">
+        android:background="#363f44">
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:padding="15dp"
+            android:src="@drawable/update"
+            android:tint="#fff"
+            android:layout_alignParentRight="true"
+            android:onClick="updata"/>
     <EditText
+        android:id="@+id/edtTimKiem"
         android:background="@drawable/bg_edt"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
